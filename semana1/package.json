@@ -1,0 +1,14 @@
+{
+  "name": "semana1",
+  "version": "0.0.1",
+  "description": "Semana1 C24",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run dev"
+  },
+  "keywords": [
+    "NodeJS"
+  ],
+  "author": "Brayan Blas",
+  "license": "MIT"
+}
