@@ -8,10 +8,8 @@ router.get ("/",(req,res)=>{
         message: "Hello world!"
     });
 });
-router.get("/api",(erq,res)=>{
-    res.status(200).json({
-        status:200,
-        message:"esto es desde router felicidades"
-    });
-});
+router.get("/",greet);
+router.route("/api".get(greetApi));
+
+//Se usa export default solo cuando es un metodo
 export default router;
