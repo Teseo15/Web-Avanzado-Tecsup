@@ -1,13 +1,19 @@
 import express from "express";
-import historyRouter from "./components/history";
-//import router from "./router";
 import userRouter from "./components/user";
+import authRouter from "./components/auth";
+import { port, base_url } from "../config/config";
+import { checkToken } from "../auth";
+import historyRouter from "./components/history/network";
 
-const app = express()
+const app = express();
+
+//? Esto sirve para poder leer el body
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-app.use(express.urlencoded({extended: true})) ;
-app.use("/api/v1/",userRouter);
-app.use("/api/v1/history/",historyRouter);
-const PUERTO= 9080
-app.listen(PUERTO,()=>console.log('el servidor inicio en el puerto: '+PUERTO))
+app.use(`${base_url}/auth`, authRouter);
+app.use(`${base_url}/user`, checkToken, userRouter);
+app.use(`${base_url}/history`, historyRouter);
+app.listen(port, () =>
+  console.log(`listening on port http://localhost:${port}`)
+);
