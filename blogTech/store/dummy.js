@@ -68,7 +68,7 @@ export const update = async (table,id,data) =>{
     return false;
   }
 
-  db[table].splice(index,0,data);
+  db[table].splice(index,1,data);
   return await list(table);
 }
 
