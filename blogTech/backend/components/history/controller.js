@@ -1,6 +1,6 @@
 import { nanoid } from "nanoid";
 import { response,reque } from "../../../network";
-import { list, find, remove } from "../../../store/dummy";
+import { list, find, remove,store,update } from "../../../store/dummy";
 
 const history_TABLE = "stories";
 export const create = async (req,res)=>{
@@ -10,7 +10,7 @@ export const create = async (req,res)=>{
     id: nanoid(),
     title: history.title,
     content: history.content,
-    history_id: history.history_id,
+    user_id: history.user_id,
     author: history.author,
   };
 
@@ -50,6 +50,6 @@ export const destroy = async (req,res)=>{
       return response({ res, ok: false, data: { error: "History not found" } });
     }
   
-    return response({ res, data: { success: "History deleted successfully!" } });
+    return response({ res, data: { success: "History deleted successfully!" },status:204 });
   
 };

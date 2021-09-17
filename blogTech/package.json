@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --exec babel-node backend/index.js"
+    "dev": "nodemon --exec babel-node backend/index.js",
+    "test": "jest"
   },
   "keywords": [],
   "author": "Brayan Blas",
@@ -12,16 +13,20 @@
   "dependencies": {
     "@babel/core": "^7.15.0",
     "@babel/node": "^7.14.9",
+    "@babel/plugin-transform-runtime": "^7.15.0",
     "@babel/preset-env": "^7.15.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
-    "nanoid": "^3.1.25"
+    "nanoid": "^3.1.25",
+    "socket.io": "^4.2.0"
   },
   "devDependencies": {
     "eslint": "^7.32.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^5.1.0"
+    "eslint-plugin-promise": "^5.1.0",
+    "jest": "^27.2.0",
+    "supertest": "^6.1.6"
   }
 }

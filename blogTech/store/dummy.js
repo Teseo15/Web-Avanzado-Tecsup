@@ -18,18 +18,25 @@ const db = {
   ],
   stories: [
     {
-      id: "h1oo",
-      title: "Historia 1",
+      id: "20",
+      title: "El conde de Montecristo",
       content: "lorem midamdklmasldkasmlkasdm",
       user_id: "L3HS",
-      author: "Tu",
+      author: "Otro",
     },
     {
-      id: "h2oo",
-      title: "Historia 2",
-      content: "lorem midamdklmasldkasmlkasdm",
+      id: "30",
+      title: "El tungsteno",
+      content: "Abuso sobre los indios",
       user_id: "L3HS",
-      author: "Tu2",
+      author: "César Vallejo",
+    },
+  ],
+  comments: [
+    {
+      id: "ldkmslkadm",
+      comment: "Un gran poder conlleva una gran responsabilidad",
+      author: "Petter Parker",
     },
   ],
 };
